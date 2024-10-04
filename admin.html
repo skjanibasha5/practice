@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="admin">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <h2>LOGO</h2>
+
+            <ul id="t">
+
+                <!-- <li><a href="#" onclick="getElementById('usercontent').innerHTML = 'User was loading'"><i id="icon"class="fa fa-users" aria-hidden="true"></i></i>User's List</a></li> -->
+                <!-- <li><a href="#"  onclick="jani()"><i id="icon" class="fa fa-users" aria-hidden="true"></i></i>User's List</a></li> -->
+
+                <!-- <li><a href="#" onclick="getElementById('usercontent').innerHTML = 'profit was loading'"><i id="icon"
+                            class="fa fa-line-chart" aria-hidden="true"></i>Profit</a></li>
+                <li><a href="#" onclick="getElementById('usercontent').innerHTML = 'losses was loading'"><i id="icon" class="fa-solid fa-money-bill"></i>Losses</a></li> -->
+
+
+                <!-- user  -->
+
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button  ><i id="icon" class="fa fa-users" aria-hidden="true"></i>User's List</button>
+                            <div class="content">
+                                <!-- <a href="" id="scroll" id="scroll" onclick="getElementById('usercontent').innerHTML = 'Red was loading'">Red -1</a>
+                                <a href="" id="scroll"id="scroll" onclick="getElementById('usercontent').innerHTML = 'Red was loading'">Green - 2 </a>
+                                <a href="" id="scroll"id="scroll" onclick="getElementById('usercontent').innerHTML = 'Red was loading'">Black - 3</a> -->
+                                <button id="scroll" onclick="getElementById('usercontent').innerHTML = 'Red was loading'">Red-1</button>
+                                <button id="scroll" onclick="getElementById('usercontent').innerHTML = 'Green was loading'">Green-2</button>
+                                <button id="scroll" onclick="getElementById('usercontent').innerHTML = 'Black was loading'">black-3</button>
+                            </div>
+                        </div> 
+
+
+
+                    </a></li>
+                <!-- profit -->
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button><i id="icon" class="fa fa-line-chart" aria-hidden="true"></i>Profit</button>
+                            <div class="content">
+                                <a href="" id="scroll">Red</a>
+                                <a href="" id="scroll">Green
+                                </a>
+                                <a href="" id="scroll">Black</a>
+                            </div>
+                        </div>
+                    </a></li>
+
+
+
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button><i id="icon" class="fa fa-trophy" aria-hidden="true"></i>Graphic</button>
+                            <div class="content">
+                                <a href="" id="scroll">User's Screen</a>
+                                <a href="" id="scroll">Profit</a>
+                                <!-- <button id="scroll">User's Screen</button>
+                                <button id="scroll" onclick="getElementById('usercontent').innerHTML = 'profit was loading'">profit</button> -->
+                            </div>
+                        </div>
+                    </a></li>
+
+
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button><i id="icon" class="fa-brands fa-paypal"></i>Payments</button>
+                            <div class="content">
+                                <a href="" id="scroll">Credit
+                                    card</a>
+                                <a href="" id="scroll">Online
+                                    Payment</a>
+                                <a href="" id="scroll">Money</a>
+                            </div>
+                        </div>
+                    </a></li>
+
+                <li><a href="#">
+                        <div class="dropdown">
+                            <button><i id="icon" class="fa fa-trophy" aria-hidden="true"></i>Winning's</button>
+                            <div class="content">
+                                <a href="" id="scroll">number of wins</a>
+                                <a href="" id="scroll">other...</a>
+                            </div>
+                        </div>
+                    </a></li>
+
+
+
+                    <li><a href="#"  >
+                        <div class="dropdown">
+                            <button><i id="icon" class="fa fa-cogs" aria-hidden="true"></i>Settings</button>
+                            <div class="content">
+                                <a href="" id="scroll">Tools</a>
+                                <a href="" id="scroll">About</a>
+                            </div>
+                        </div>
+                    </a></li>
+
+
+                <!-- <li><a href="#" onclick="getElementById('usercontent').innerHTML = 'setting was loading'"><i id="icon"
+                            class="fa fa-cogs" aria-hidden="true"></i>Settings</a></li> -->
+
+            </ul>
+
+        </div>
+        <!-- navbar -->
+        <div class="section">
+            <div class="header">
+                <h2>Elaboration Tech Solution</h2>
+                <div class="user">
+
+                    <!-- <a href="" id="btn" onclick="jani()">
+                        <i id="icon" class="fa-solid fa-user"></i></a> -->
+                    <button id="btn" onclick="jani()"> <i id="icon" class="fa-solid fa-user"></i></button>
+                    <!-- <p id="para"> -->
+                    <form action="#php"  id="para">
+
+
+                        <label class="u" for="uname"><b>Username Details:</b></label>
+                        <input class="u t" type="text" placeholder="Username or Gmail" name="uname" required>
+
+                        <label class="u" for="psw"><b>Password:</b></label>
+                        <input class="u t" type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button class="b" type="submit">Login</button>
+
+                    </form>
+                    <!-- </p> -->
+                </div>
+            </div>
+            <!-- fuctional of js -->
+            <div class="id">
+                <p id="usercontent">some thing issue</p>
+                <p id="ja"></p>
+            </div>
+        </div>
+        <script>
+// <!-- <li><a href="#"  onclick="jani()"><i id="icon" class="fa fa-users" aria-hidden="true"></i></i>User's List</a></li> -->
+            //  jani = ()=> {
+            //     document.getElementById("demo").innerHTML = "janibashs";
+            //   }
+            function jani() {
+                let btn = document.getElementById('btn');
+
+
+                let para = document.getElementById('para');
+                if (para.style.display != 'block') {
+                    para.style.display = 'block';
+                }
+                else {
+                    para.style.display = 'none';
+                }
+            }
+        </script>
+</body>
+
+</html>

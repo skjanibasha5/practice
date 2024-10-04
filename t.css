@@ -1,0 +1,11 @@
+/* styles.css */
+#name-container {
+    padding: 20px;
+}
+
+.name {
+    font-size: 24px;
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}

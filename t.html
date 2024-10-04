@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Action Example</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+    <div id="name-container">
+        <div class="name" data-color="red">Jani</div>
+        <div class="name" data-color="blue">Basha</div>
+        <div class="name" data-color="green">Ayaz</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+        <div class="name" data-color="orange">Nenu</div>
+    </div>
+
+    <script>
+        // script.js
+
+// Function to handle click events
+function handleClick(event) {
+    const target = event.target;
+
+    // Check if the clicked element has the 'name' class
+    if (target.classList.contains('name')) {
+        // Change the text color to a different color on each click
+        const currentColor = target.style.color;
+        const newColor = target.dataset.color;
+
+        // Toggle between the original color and the new color
+        target.style.color = (currentColor === newColor) ? 'black' : newColor;
+    }
+}
+
+// Add event listener to the container
+document.getElementById('name-container').addEventListener('click', handleClick);
+
+    </script>
+</body>
+</html>
