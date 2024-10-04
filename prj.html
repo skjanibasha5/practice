@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prj.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav_logo"><img src="https://cdn-icons-png.flaticon.com/128/5321/5321063.png" alt="" srcset=""></a>
+            <ul class="nav_items">
+                <li class="nav_item">
+                    <a href="#" class="nav_link">Home</a>
+                    <a href="#" class="nav_link">Services</a>
+                    <a href="#" class="nav_link">Contact Us</a>
+                </li>
+            </ul>
+            <button class="button" id="form-open">Login</button>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="form_container">
+            <i class="fas fa-times"></i>
+            <div class="form login_form">
+                <form action="#">
+                    <h2>Login</h2>
+
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your password">
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Forgot password?</a>
+                    </div>
+                    <button class="button">Login Now</button>
+                    <div class="login_signup">
+                        Don't have an account?<a href="#" class="" id="signup">Signup</a>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- signup form -->
+
+            <div class="form signup_form">
+                <form action="#">
+                    <h2>Signup</h2>
+
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+
+
+                    <div class="input_box">
+                        <input type="password" placeholder="Create your password">
+                    </div>
+
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm your password">
+                    </div>
+
+                   
+
+                    
+                    <button class="button">Signup</button>
+                    <div class="login_signup">
+                        Already have an account?<a href="#" class="" id="login">Login</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="sec">
+            <h2>Gather rent though online platforms</h2>
+            <Button id="payment">Payment</Button>
+        </div>
+        <div class="pay">
+            <div class="form login_form"></div>
+                <form action="#">
+                    <h2>Login</h2>
+
+
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your password">
+                    </div>
+
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forgot_pw">Forgot password?</a>
+                    </div>
+                    <button class="button">Login Now</button>
+                    <div class="login_signup">
+                        Don't have an account?<a href="#" class="" id="signup">Signup</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="prj.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
