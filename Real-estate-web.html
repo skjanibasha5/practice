@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>realestate web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+    header{
+        background-color: darkgrey;
+        height: 120px;
+
+    }
+    ul li{
+        list-style-type: none;
+        padding: 10px;
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+    }
+    .logo-name{
+        color: white;
+        padding: 10px;
+        font-size: 36px;
+        float: left;
+        padding: 10px;   
+    }
+    
+    .logo-name img{
+        height: 110px;
+        width: 150px;
+    }
+    .navbar{
+        padding: 60px 0px;
+        text-align: center;
+    }
+    nav a {
+        list-style-type: none;
+        text-align: center;
+        padding: 30px;
+        color: darkslategray;
+        text-decoration: none;
+        font-size: 30px;
+        position: relative;
+        display: inline;
+        
+    }
+
+    .btn{
+        display: inline-block;
+        padding-left:50px ;        
+    }
+    .signup{
+        background-color: brown;
+        padding: 12px;
+        height: 40px;
+        width: 120px;
+        border-radius: 25px;
+        border: none;
+        float: right;
+        
+    }
+    .searchbar{
+        text-align: center; 
+        padding: 20px;
+        background-image: url("https://www.apartments.com/a/df5ed6/modules/homepage/content/images/heroes/chicago-il/1920.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .searchbar h1{
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0.755);
+    }
+    .searchbar p{
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.755)
+    }
+    .search{
+        height: 40px;
+        width: 580px;
+        font-size: 25px;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid grey;
+        text-align: center;
+        background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    #properties{
+        background-color: antiquewhite;
+        margin: 0px;
+    }
+    .card{
+        display: flex ;
+        flex-direction:column;
+        align-items: center;
+        background-color: antiquewhite;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .card>img{
+        height:800px;
+        width: 80%;
+        padding-bottom: 20px;
+    }
+    .card div>span{
+        color: darkslateblue;
+        font-size: 20px;
+        padding: 20px;
+        margin: 20px;
+        font-weight: 600;
+        text-align: left;
+    }
+    #about{
+        background-color: aliceblue;
+        margin: 0px;
+        padding: 20px;
+    }
+    .container-about{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .container-about div h2{
+        color: brown;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+    .container-about div p{
+        font-size: 25px;
+        color: darkolivegreen;
+        line-height: 40px;
+        letter-spacing: 1;
+        word-spacing: 1;
+        width: 90%;
+    }
+    .container-about div img{
+        height: 450px;
+        width: 450px;
+    }
+    .clients{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .clients h1{
+        color: burlywood;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 1000;
+    }
+    .clients div i{
+        color: palevioletred;
+        background-color: palegoldenrod;
+        font-size: 50px;
+        border-radius: 50%;
+    }
+    .clients div p{
+        width: 50vw;
+    }
+    #contact{
+        background-color: darkgray;
+    }
+    form input,form textarea{
+        display: block;
+        height: 40px;
+        width: 500px;
+        border-radius: 15px;
+        border: 2px  solid lightgrey;
+        columns: 40;
+        padding: 10px;
+    }
+    form textarea{
+        height: 200px;
+        width: 500px;
+    }
+    .formbtn{
+        border: 0px solid grey;
+        padding: 15px 15px;
+        background-color: aquamarine;
+        border-radius: 10px;
+        margin: 10px;
+        font-size: 20px;
+        color: darkolivegreen;
+    }
+    label{
+        color: darkslateblue;
+        font-size: 25px;
+        display: block;
+        padding: 10px;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-arount;
+        align-content: space-around;
+    }
+    #form-container{
+        box-sizing: border-box;
+        box-shadow: 0px 5px 5px grey;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        height: 0%;
+        width: 45%;
+    }
+    #address-container{
+        height: 0%;
+        width: 38%;
+        box-sizing: border-box;
+        box-shadow: 0px 5px 5px grey;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    #address-container a{
+        text-decoration: none;
+        color: darksalmon;
+        font-size: 25px;
+    }
+    footer{
+        background-color: black;
+        display: block;
+        clear: both;
+        color:aliceblue;
+    }
+    div h3{
+        padding: 15px;
+    }
+    div h2{
+        padding: 20px;
+        text-align: center;
+    }
+    div h1{
+        font-size: 40px;
+        padding: 20px;
+    }
+    h1 sup{
+        font-size: 20px;
+        color: grey;
+    }
+    i{
+        font-size: 35px;
+        color: white;
+        padding: 20px;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-subscribe{
+        padding: 10px;
+    }
+    .footer-subscribe input{
+        height: 35px;
+        width: 200px;
+        border-radius: 12px;
+        padding: 5px;
+        margin: 20px;
+    }
+    .send-btn{
+        display: block;
+        background-color: sandybrown;
+        padding: 5px 15px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div >
+    
+        <div class="logo-name">
+            <img src="https://img.freepik.com/free-vector/logo-real-estate-home-solutions-that-is-home-solution_527952-33.jpg?size=338&ext=jpg&ga=GA1.1.553209589.1713744000&semt=ais" alt="">
+            
+        </div>
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#properties">Buy</a>
+                <a href="#">Sell</a>
+                <a href="#">Rent</a>
+                <a href="#contact">Contact</a>
+                <div class="btn">
+                    <button class="signup">Sign up</button>
+                </div>
+            </nav>
+        </div>  
+
+    </header>
+    <section>
+        
+        <div class="searchbar">
+            <h1>Discover Your New Home</h1>
+            <p>Helping 100 million renters find their perfect fit.</p>
+            <input type="text" class="search" name="search" placeholder="Enter the location" id="search">
+        </div>
+    </section>
+    <section id="properties">
+        <h1 style="text-align: center; color:darkgoldenrod;padding-top:30px">Our Properties</h1>
+        <div  class="card">
+                <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt=""/>
+                <div>
+                    <span>1.25 Cr </span>|
+                    <span>1250 sqft</span>|
+                    <span>3BHK Flat</span>|
+                    <span>Pune, India</span>
+                </div>
+                
+        </div>
+
+        <div  class="card">
+            <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt=""/>
+            <div>
+                <span>1.50 Cr </span>|
+                <span>1400 sqft</span>|
+                <span>4BHK Flat</span>|
+                <span>Bangalore, India</span>
+            </div>
+            
+        </div>
+        <div  class="card">
+            <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt=""/>
+            <div>
+                <span>1.0 Cr </span>|
+                <span>1200 sqft</span>|
+                <span>3BHK Flat</span>|
+                <span>Hyderabad, India</span>
+            </div>
+            
+        </div>
+        <div  class="card">
+            <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt=""/>
+            <div>
+                <span>1.25 Cr </span>|
+                <span>1250 sqft</span>|
+                <span>3BHK Flat</span>|
+                <span>Pune, India</span>
+            </div>
+            
+        </div>
+        <div  class="card">
+            <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt=""/>
+            <div>
+                <span>1.50 Cr </span>|
+                <span>1350 sqft</span>|
+                <span>3BHK Flat</span>|
+                <span>Mumbai, India</span>
+            </div>
+            
+        </div>
+        <div  class="card">
+            <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt=""/>
+            <div>
+                <span>1.75 Cr </span>|
+                <span>1450 sqft</span>|
+                <span>3BHK Flat</span>|
+                <span>Delhi, India</span>
+            </div>
+            
+        </div>
+    </section>
+    <section id="about">
+        <div class="container-about">
+            <div>
+            <h2 >About Us:</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati cumque, labore magni inventore minus praesentium repudiandae facilis expedita explicabo, incidunt totam eligendi doloremque sed ad. Vel aut inventore a magnam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi harum natus tempora eveniet, sed ratione rem debitis porro mollitia quod, dolorem veritatis commodi recusandae perferendis molestiae! Atque, perspiciatis temporibus.
+            </p>
+        </div>
+        
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2024/03/04/19/47/building-8613046_640.jpg" alt="">
+        </div>
+        </div>
+        <div class="clients">
+            <h1>What our clients are saying</h1>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h3>John Wills</h3>
+                <p><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat earum repudiandae illo a alias beatae enim, cumque nulla! Voluptatibus modi, tempore non quod quasi nulla quis incidunt. Accusantium, odio repellat.</q></p>
+            </div>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h3>Peter Stark</h3>
+                <p><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat earum repudiandae illo a alias beatae enim, cumque nulla! Voluptatibus modi, tempore non quod quasi nulla quis incidunt. Accusantium, odio repellat.</q></p>
+            </div>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h3>Chriss Stone</h3>
+                <p><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat earum repudiandae illo a alias beatae enim, cumque nulla! Voluptatibus modi, tempore non quod quasi nulla quis incidunt. Accusantium, odio repellat.</q></p>
+            </div>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <h3>emma Willson</h3>
+                <p><q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat earum repudiandae illo a alias beatae enim, cumque nulla! Voluptatibus modi, tempore non quod quasi nulla quis incidunt. Accusantium, odio repellat.</q></p>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+
+            <div class="flex">
+                <div id="form-container">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" />
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" />
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" />
+
+                        <label for="message">Message</label>
+                        <textarea id="message">Write your message here..</textarea>
+
+                        <button class="formbtn">Send Message</button>
+                    </form>
+                </div>
+
+                <div id="address-container">
+                    <label>Address</label>
+                    <address>
+                        500081 Hyderabad, Telangana, India.
+                    </address>
+
+                    <label>Phone</label>
+                    <a href="#">+91-987-654-3210</a>
+
+                    <label>Email Address</label>
+                    <a href="#">email@domain.com</a>
+                </div>
+            </div>
+        </div><br>
+    </section>
+
+
+    <footer>
+        <div class="flex">
+            <div class="foot-name">
+                <h1>Real Estate <br>Home solutions <sup>TM</sup></h1>
+                <h3>Follow Us:</h3>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+                <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            
+            </div>
+            <div class="footer-subscribe">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <input type="text" placeholder="Enter Email" />
+                    <button class="send-btn">Send</button>
+            </div>
+           
+            <div class="foot-about">
+                <h3>About Us</h3>
+                <ul>    
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">sitemap</a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">privacy statement</a></li>
+                    <li><a href="#">Press Inquiries</a></li>
+                </ul>
+            </div>
+            <div class="foot-quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr>
+        <div style="text-align: center;">
+            <p>© 2024 All Rights Reserved. |  Terms of Service   | Privacy Statement</p>
+        </div>
+    </footer>
+     
+</body>
+</html>

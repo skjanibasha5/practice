@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate</title>
+    <style>
+        body{
+            box-sizing:border-box ;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(225, 236, 236);
+            background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231001/pngtree-3d-rendering-of-a-modern-cottage-house-side-view-image_13553691.png');    
+             background-repeat: no-repeat;
+           background-size:100%, 90vh; 
+           font-family: sans-serif;
+     }
+        nav{
+            width:100%;
+            height:10vh;
+            display: flex;
+            align-items: center;
+            padding:10px;
+            color:white;
+            background-color: rgb(126, 236, 116);
+        }
+        
+        a{
+            text-decoration: none;
+            padding:10px;
+            text-align: center;
+            color:white;
+        }
+        .logo{
+            float: left;
+            display: flex;
+            padding:20px;
+        }
+        .headerlist{
+         text-align: center;
+         padding:10px;
+         padding-left:260px;
+        }
+        .hed{
+            padding:15px;
+            font-size: large;  
+        }
+        .button{
+            background-color: white;
+            color:red;
+            padding:10px;
+            margin:5px;
+            border-radius: 20px;
+        }
+        .head{
+            color:white;
+            text-align: center;
+           margin-top:200px;
+           margin-bottom:40px;
+        }
+       main{
+        display:inline;
+       }
+       .button12{
+      text-align: center;
+       }
+       .button2{
+        background-color:red;
+        padding:16px;
+        border-radius: 16px;
+        color:white;
+        margin:5px;
+        
+       }
+       .button3{
+        background-color:white;
+        padding:16px;
+        border-radius: 15px;
+        margin: 5px;
+       }
+       .rigistration{
+        display: flex;
+       }
+       .form{
+         text-align: center;
+        background-color: white;
+        width:80%;
+        height:10vh;
+        margin-top:30px;
+        margin-left: 10%;
+        padding:30px;
+       box-shadow:3px 3px 5px 5px rgb(243, 232, 232);
+    
+        }
+        .input{
+            width:50px;
+            height:5vh;
+            margin-top:50px;
+            /* text-align: center; */
+          margin-left:10px;
+            padding:10px;
+            display:inline;
+        }
+        .search{
+            background-color:red;
+           padding:10px;
+           border-radius: 10px;
+        }
+        .search:hover{
+            background-color:white;
+        }
+        .range:hover{
+         color:red;
+        }
+        .range{
+            display: inline-block;
+            position: relative;
+            
+        }
+        .renge1{
+            display:none;
+            position:absolute;
+            padding:10px;
+            
+            
+        }
+        .renge1:hover{
+            color:red;
+            border:1px solid red;
+        }
+        .range:hover .renge1{
+            display: block;
+        }
+        .button1::first-letter{
+            font-size:25px;
+            padding:5px;
+        }
+        section{
+            width:100%;
+            height:40vh;
+            margin-top: 200px;
+            display: flex;
+            padding:20px;
+            justify-content: space-around;
+            
+        }
+        .img1{
+           background-image: url('https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600'); 
+           background-repeat: no-repeat;
+           background-size: 80%, 50vh;
+           padding: 20px;
+           width:50%;
+           height:40vh;
+
+        }
+        .img2{
+           background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=600'); 
+           background-repeat: no-repeat;
+           background-size: 80%, 50vh;
+          width:50%;
+          height:40vh;
+          padding: 20px;
+
+        }
+        .img3{
+            background-image: url('https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-repeat: no-repeat;
+           background-size: 80%, 50vh;
+          width:50%;
+          height:40vh;
+          padding: 20px;
+        }
+        .dd1{
+            display: inline;
+            position: relative;
+        }
+        .content1{
+            display:none;
+            position:absolute;
+        }
+        .dd1:hover .content1{
+            display:block;
+            background-color: rgb(192, 179, 179);
+            padding:10px;
+        }
+        .content1 a:hover{
+            color:red;
+            background-color: white;
+        }
+        hr{
+            width:60px;
+        }
+        footer{
+            background-color:red;
+            width:100%;
+            height:20vh;
+            display:flex;
+        }
+        .rigister{
+            padding:20px;
+            float:right;
+            margin-left: 500px;
+            color:white;
+            background-color: rgb(245, 146, 146);
+            margin-top: 25px;
+            
+        }
+        .agent{
+            padding:30px;
+            color:white;
+        }
+       .hed::first-letter{
+        font-size:25px ;
+       }
+       .rigister:hover{
+        background-color: rgb(218, 213, 213);
+       }
+       .Featured{
+        background-color:rgb(130, 130, 243);
+        padding:5px;
+        color:white;
+        margin-top:30px;
+        border-radius: 5px;
+       }
+       .for{
+        background-color:rgb(243, 53, 53);
+        padding:5px;
+        color:white;
+        margin-top:30px;
+        border-radius: 5px;
+        
+       }
+      h4{
+        margin-top:150px;
+        color:white;
+      font-size: 23px;
+      }
+      @media(max-width:600px){
+        nav, main,section,footer{
+            width:100%;
+            height:auto;
+            
+        }
+    }
+    
+
+    </style>
+</head>
+<body>
+   <div class="container">
+<nav>
+    <div class="logo">
+    <img src="https://findhouse-reactjs.ibthemespro.com/assets/images/header-logo.png" alt="logo">
+    <span class="hed">FindHouse</span>
+     </div>
+<div class="headerlist">
+    <div class="dd1">
+<a href="#">Home</a>
+<div class="content1">
+<a href="#">Home1</a><hr>
+<a href="#">Home1</a><hr>
+<a href="#">Home1</a><hr>
+<a href="#">Home1</a><hr>
+</div>
+</div>
+<a href="#">Listing</a>
+<a href="#">Propert</a>
+<a href="#">Pages</a>
+<a href="#">Home</a>
+<a href="#">Blog</a>
+<a href="#">Contact</a>
+<a href="#">Login/Rigister</a>
+</div>
+<div class="button1">
+<span class="button">+Create Listing</span>
+</div>
+</nav>
+<main>
+    <div class="head">
+<h1>Find Your Dream Home</h1>
+   <p> From as low as $10 per day with limited time offer discounts.</p>
+    </div>
+    <div class="button12">
+<span class="button2">Buy</span>
+<span class="button3">Rent</span>
+    </div>
+    <div class="rigistration">
+        <div class="form">
+<form action="#">
+    <div class="input">
+<input type="text" id="enter-keyword" value="Enter Keyword..." style="padding:10px;margin-top:10px"></div>
+<div class="input">
+<select name="propertyType" id="type" value="Property Type" style="padding:10px;margin-top:10px">
+    <option value="Property Type">Property Type</option>
+    <option value="Apartment">Apartment</option>
+    <option value="Bungalaw">Bungalaw</option>
+    <option value="condo">Condo</option>
+    <option value="house">House</option>
+    <option value="land">Land</option>
+    <option value="single family">Single Family</option>
+</select>
+</div>
+<div class="input">
+<input type="text" id="location" value="location" style="padding:10px;margin-top:10px">
+</div>
+<div class="input">
+    <div class="range">
+    <label for="range" style="padding:10px;margin-top:10px;border:1px solid black">Price</label>
+    <div class="renge1">
+<input type="range" min="$10000" max="$20000 " id="price" name="price" value="$10000 - $20000" style="color:rgb(238, 88, 88)">
+</div></div>
+</div>
+<span style="padding:10px">Advanced</span>
+
+<span class="search" style="width:50px;height:1vh">Serch</span>
+</form>
+    </div>
+</main>
+<section>
+    <div class="img1">
+        <span class="Featured">Featured</span>
+        <span class="for">For Sale</span>
+        <h4>$1300/mo</h4>
+    </div>
+    <div class="img2">
+        <span class="Featured">Featured</span>
+        <span class="for">For Sale</span>
+        <h4>$1400/mo</h4>
+    </div>
+    <div class="img3">
+        <span class="Featured">Featured</span>
+        <span class="for">For Sale</span>
+        <h4>$1300/mo</h4>
+    </div>
+</section>
+<footer>
+    <div class="agent">
+        <h3>Become a Real Estate Agent</h3>
+        <small>We only work with the best companies around the globe</small></div>
+        <div>
+        <span class="rigister"><a href="#">Riguster now</a></span>
+
+    </div>
+    
+</footer>
+ </div> 
+</body>
+</html>
